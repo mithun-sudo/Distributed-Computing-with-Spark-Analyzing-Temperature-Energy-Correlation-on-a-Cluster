@@ -1,10 +1,13 @@
-# Smart-Home-IoT
-
+# Smart-Home-IoT, A data engineering project.
 
 Dataset for this project was picked from kaggle. Link to the dataset
 https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information
+
 ## About Dataset
-	For 350 days the energy consumption of all appliances and rooms are tracked at the regular intervals of one minute. Each record consists of energy consumed by various rooms and appliances for a minute. The objective is to group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
+For 350 days, the energy consumption of house appliances are tracked at the regular interval of one minute. Each record consists of energy consumed by the appliances and the weather conditions during that minute. 
+
+## Objective
+The objective is to perform linear regression on temperature vs energy consumption. group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
 The energy consumption strongly depends on weather. Based on that we can classify the appliances the room into three categories
 •	Generates heat to combat the cool weather.
 •	Consumes the heat to prevent temperature from raising.
@@ -23,23 +26,23 @@ A cluster is needed to run the spark application we have created. AWS EC2 can be
 For one master node and two slave nodes, three EC2 instances were rented. Hadoop 2.10.2 was downloaded in each nodes and spark 3.1.0 was downloaded in one on the slave node. The spark application will be deployed in cluster mode. The driver program in application master will reside on the slave node which will be negotiating with  resource manager in master node for resources. 
 
 Using spark-submit, spark application was run in different configurations.
-Configuration 1:
+### Configuration 1:
 --num-executors 2   --executor-cores 2   –executor-memory 5g
-	With cache()	Without cache()
-Elapsed time	17s	19s
+	      With cache()	  Without cache()
+Elapsed time	 17s	                19s
 
 
-Configuration 2:
+### Configuration 2:
 --num-executors 5   --executor-cores 1   –executor-memory 2g
 	With cache()	Without cache()
 Elapsed time	17s	19s
 
 
-Configuration 3:
+### Configuration 3:
 --num-executors 2   --executor-cores 3   –executor-memory 5g
 Job failed because not enough cores for driver program.
 
-Configuration 4:
+### Configuration 4:
  --master local[3]
 	With cache()	Without cache()
 Elapsed time	26s	30s
