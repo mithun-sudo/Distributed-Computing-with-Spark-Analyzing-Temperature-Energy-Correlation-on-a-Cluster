@@ -8,9 +8,9 @@ The objective is to perform linear regression on average temperature of day vs e
 ***
 ## Methodology
 * The energy consumption strongly depends on weather that is a well know fact. Based on that we can classify the appliances into three categories:
-1. Generates heat to combat the cool weather.
-2. Consumes the heat to prevent temperature from raising.
-3. Does not depend on weather
+  1. Generates heat to combat the cool weather.
+  2. Consumes the heat to prevent temperature from raising.
+  3. Does not depend on weather
 
 * From the dataset we can also understand that the house is located somewhere where the temperature can range between -24 at night and 34 at day. Since the temperature variance is high, the average temperature that we will be finding will be of less use. So, it is better to divide a day into two parts. From 7:00 AM to 7:00 PM will considered as day and remaining falls under night. By doing this our linear regression model will be more accurate. 
 * Row_number() window function with order by timestamp can be used to number each row. Each day consists of 1440 minutes. So each row number is divided by 1440 and casted as integer data type. By doing this we have common key for a particular day (day). 
