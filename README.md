@@ -34,21 +34,29 @@ Refer [main.py]([your-project-name/blob/master/your-subfolder/README.md](https:/
 |-------------|-------------|-------------------|
 |Elapsed time |	    26s	    |         30s       |
 
-Cluster setup and configuration:
-A cluster is needed to run the spark application we have created. AWS EC2 can be used to setup a Hadoop cluster. Out of all instances available c6a.xlarge was chosen. It provided 4 cores and 8gb ram. The dataset had a size of 24 mb so  8gb ram is sufficient for this job. 
-For one master node and two slave nodes, three EC2 instances were rented. Hadoop 2.10.2 was downloaded in each nodes and spark 3.1.0 was downloaded in one on the slave node. The spark application will be deployed in cluster mode. The driver program in application master will reside on the slave node which will be negotiating with  resource manager in master node for resources. 
+#### Cluster mode:
+* A cluster is needed to run the spark application. AWS EC2 can be used to setup a Hadoop cluster. 
+* Out of all instances available c6a.xlarge was chosen. It had 4 cores and 8gb ram. The dataset had a size of 24 mb. So 8gb ram was sufficient for this job. 
+* For one master node and two slave nodes, three EC2 instances were rented. 
+* Hadoop 2.10.2 was downloaded in each nodes and spark 3.1.0 was downloaded in one on the slave node. 
+* The spark application will be deployed in cluster mode. The driver program in application master will reside on the slave node which will be negotiating with  resource manager in master node for resources. 
 
 Using spark-submit, spark application was run in different configurations.
 ###### Configuration 1:
---num-executors 2   --executor-cores 2   –executor-memory 5g
-	      With cache()	  Without cache()
-Elapsed time	 17s	                19s
 
+--num-executors 2   --executor-cores 2   –executor-memory 5g
+
+|	      |With cache() | 	Without cache() |
+|-------------|-------------|-------------------|
+|Elapsed time |	    17s	    |         19s       |
 
 ###### Configuration 2:
+
 --num-executors 5   --executor-cores 1   –executor-memory 2g
-	With cache()	Without cache()
-Elapsed time	17s	19s
+	
+|	      |With cache() | 	Without cache() |
+|-------------|-------------|-------------------|
+|Elapsed time |	    17s	    |         19s       |
 
 
 ###### Configuration 3:
