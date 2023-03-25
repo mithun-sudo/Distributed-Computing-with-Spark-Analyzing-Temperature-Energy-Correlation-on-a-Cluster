@@ -21,33 +21,40 @@ The objective is to perform linear regression on average temperature of day vs e
 * At last, we can apply filter function on dn field to obtain night.csv and day.csv from main dataframe.
 
 Refer [main.py]([your-project-name/blob/master/your-subfolder/README.md](https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/main.py)) for full code.
+***
+## Spark-submit
 
-This pyspark program can be run either in local mode or cluster mode. Here program is ran in both modes to compare elapsed time and also wherever possible optimization features were used. 
+* Apache spark allows user to run spark application either in local mode or cluster mode. 
+* Here the program is ran in both modes to compare respective elapsed time and also wherever possible optimization features were tried and tested.
+
+#### Local mode
+ --master local[3]
+ 
+|	      |With cache() | 	Without cache() |
+|Elapsed time |	    26s	    |         30s       |
+
 Cluster setup and configuration:
 A cluster is needed to run the spark application we have created. AWS EC2 can be used to setup a Hadoop cluster. Out of all instances available c6a.xlarge was chosen. It provided 4 cores and 8gb ram. The dataset had a size of 24 mb so  8gb ram is sufficient for this job. 
 For one master node and two slave nodes, three EC2 instances were rented. Hadoop 2.10.2 was downloaded in each nodes and spark 3.1.0 was downloaded in one on the slave node. The spark application will be deployed in cluster mode. The driver program in application master will reside on the slave node which will be negotiating with  resource manager in master node for resources. 
 
 Using spark-submit, spark application was run in different configurations.
-### Configuration 1:
+###### Configuration 1:
 --num-executors 2   --executor-cores 2   –executor-memory 5g
 	      With cache()	  Without cache()
 Elapsed time	 17s	                19s
 
 
-### Configuration 2:
+###### Configuration 2:
 --num-executors 5   --executor-cores 1   –executor-memory 2g
 	With cache()	Without cache()
 Elapsed time	17s	19s
 
 
-### Configuration 3:
+###### Configuration 3:
 --num-executors 2   --executor-cores 3   –executor-memory 5g
 Job failed because not enough cores for driver program.
 
-### Configuration 4:
- --master local[3]
-	With cache()	Without cache()
-Elapsed time	26s	30s
+
  
 Performance increased by 52% when the spark application ran in cluster mode.
 
