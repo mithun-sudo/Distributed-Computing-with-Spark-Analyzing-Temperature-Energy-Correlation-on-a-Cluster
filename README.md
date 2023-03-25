@@ -1,7 +1,7 @@
 # Smart-Home-IoT
 
 
-Dataset for this project was picked from kaggle. Link to the [dataset] (https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information “dataset”).
+Dataset for this project was picked from kaggle. Link to the [dataset] (https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information “dataset”)
 For 350 days the energy consumption of all appliances and rooms are tracked at the regular intervals of one minute. Each record consists of energy consumed by various rooms and appliances for a minute. The objective is to group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
 The energy consumption strongly depends on weather. Based on that we can classify the appliances the room into three categories
 •	Generates heat to combat the cool weather.
