@@ -4,14 +4,17 @@
 For 350 days, the energy consumption of house appliances are tracked at the regular interval of one minute. Each record consists of energy consumed by the appliances and the weather conditions during that minute. 
 ***
 ## Objective
-The objective is to perform linear regression on temperature vs energy consumption. group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
-The energy consumption strongly depends on weather. Based on that we can classify the appliances the room into three categories
-•	Generates heat to combat the cool weather.
-•	Consumes the heat to prevent temperature from raising.
-•	Does not depend on weather
+The objective is to perform linear regression on average temperature of day vs energy consumption during that day. In order to prepare data for that the timestamp column needs to be grouped into day and night, then aggregation should be performed on energy consumption.
+***
+## Methodology
+* The energy consumption strongly depends on weather that is a well know fact. Based on that we can classify the appliances into three categories:
+1. Generates heat to combat the cool weather.
+2. Consumes the heat to prevent temperature from raising.
+3. Does not depend on weather
 
-From the dataset we can also understand that the house is located somewhere where the temperature can range between -24 at night and  34 at night. Since the temperature variance is high, the average temperature that we will be finding out will be of less use. So, it is better to divide a day into two parts. From 7:00 AM to 7:00 PM is considered as day and remaining falls under night. By doing this our linear regression model will be more accurate. 
-Row_number() window function with order by timestamp can be used to number each row. Each day consists of 1440 minutes. So each row number is divided by 1440 and casted as integer data type. By doing this we have common key for a particular day (day). 
+* From the dataset we can also understand that the house is located somewhere where the temperature can range between -24 at night and 34 at day. Since the temperature variance is high, the average temperature that we will be finding will be of less use. So, it is better to divide a day into two parts. From 7:00 AM to 7:00 PM will considered as day and remaining falls under night. By doing this our linear regression model will be more accurate. 
+* Row_number() window function with order by timestamp can be used to number each row. Each day consists of 1440 minutes. So each row number is divided by 1440 and casted as integer data type. By doing this we have common key for a particular day (day). 
+ 
 Again Row_number window function is used. But this time it is used generate minutes for each day(dn_key).
 Using case when statement on dn_key, each minute in a day is classified as ‘D’ if it is between 420 and 1139 or else ‘N’, where ‘D’ implies day and ‘N’ implies night (dn).
 Now on two keys’ day’ and ‘dn’ we can use group by key method and perform sum function on energy consumption fields and average function on temperature field.
