@@ -1,11 +1,8 @@
 # Smart-Home-IoT, A data engineering project.
-
-Dataset for this project was picked from kaggle. Link to the dataset
-https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information
-
+***
 ## About Dataset
 For 350 days, the energy consumption of house appliances are tracked at the regular interval of one minute. Each record consists of energy consumed by the appliances and the weather conditions during that minute. 
-
+***
 ## Objective
 The objective is to perform linear regression on temperature vs energy consumption. group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
 The energy consumption strongly depends on weather. Based on that we can classify the appliances the room into three categories
@@ -52,6 +49,9 @@ Performance increased by 52% when the spark application ran in cluster mode.
 
 
 
+
+Dataset for this project was picked from kaggle. Link to the dataset
+https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information
 
 
  
