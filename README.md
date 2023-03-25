@@ -31,6 +31,7 @@ Refer [main.py]([your-project-name/blob/master/your-subfolder/README.md](https:/
  --master local[3]
  
 |	      |With cache() | 	Without cache() |
+|-------------|-------------|-------------------|
 |Elapsed time |	    26s	    |         30s       |
 
 Cluster setup and configuration:
