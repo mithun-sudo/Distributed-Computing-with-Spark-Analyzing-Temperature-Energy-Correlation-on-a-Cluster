@@ -22,9 +22,7 @@ win_spec = window_spec.partitionBy("day")
 df = df.withColumn("dn_key", row_number().over(win_spec))
 # Creating a temporary table to use spark sql. The minutes are classified either as D or N.
 df.createOrReplaceTempView("table")
-df = spark.sql("""select *,
- case when dn_key > 419 and dn_key < 1140 then 'D' else 'N' end as dn
- from table""")
+df = spark.sql("""select *, case when dn_key > 419 and dn_key < 1140 then 'D' else 'N' end as dn from table""")
 # Grouping the records by day, dn and performing aggregations on columns.
 df = df.groupBy(col("day"), col("dn")).agg(sum("use"), sum("gen"), avg("temperature"),
                       sum("generates_heat"), sum("consumes_heat"), sum("does_not_depend_on_weather").alias("stable"))
