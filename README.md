@@ -1,5 +1,4 @@
 # Smart-Home-IoT
-Linear regression model that compares temperature and energy consumption. 
 Dataset from Kaggle 
 For 350 days the energy consumption of all appliances and rooms are tracked at the regular intervals of one minute. Each record consists of energy consumed by various rooms and appliances for a minute. The objective is to group the timestamps (one minute) into a day and perform aggregations on energy consumption. 
 The energy consumption strongly depends on weather. Based on that we can classify the appliances the room into three categories
