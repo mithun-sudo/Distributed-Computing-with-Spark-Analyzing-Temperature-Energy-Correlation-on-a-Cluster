@@ -13,8 +13,8 @@ The objective is to perform linear regression on average temperature of day vs e
   3. Does not depend on weather
 
 * From the dataset we can also understand that the house is located somewhere where the temperature can range between -24 at night and 34 at day. Since the temperature variance is high, the average temperature that we will be finding will be of less use. So, it is better to divide a day into two parts. From 7:00 AM to 7:00 PM will considered as day and remaining falls under night. By doing this our linear regression model will be more accurate. 
-* Row_number() window function with order by timestamp can be used to number each row. Each day consists of 1440 minutes. So each row number is divided by 1440 and casted as integer data type. By doing this we have common key for a particular day (day). 
- 			`df = df.withColumn("day", (((row_number().over(window_spec) - 1) / 1440) + 1).cast(IntegerType()))`
+* Row_number() window function with order by timestamp can be used to number each row. Each day consists of 1440 minutes. So each row number is divided by 1440 and casted as integer data type. By doing this we have common key for a particular day (day). </br>
+ `df = df.withColumn("day", (((row_number().over(window_spec) - 1) / 1440) + 1).cast(IntegerType()))`
 * Again Row_number window function is used. But this time it is used generate minutes for each day(dn_key).
 * Using case when statement on dn_key, each minute in a day is classified as ‘D’ if it is between 420 and 1139 or else ‘N’, where ‘D’ implies day and ‘N’ implies night (dn).
 * Now on two keys’ day’ and ‘dn’ we can use group by key method and perform sum function on energy consumption fields and average function on temperature field.
