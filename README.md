@@ -65,14 +65,13 @@ Job failed because not enough cores for driver program.
 
 
  
-Performance increased by 52% when the spark application ran in cluster mode.
+Performance increased by **52%** when the spark application ran in cluster mode.
 
 
 
 
 
-Dataset for this project was picked from kaggle. Link to the dataset
-https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information
+Dataset for this project was picked from kaggle. Link to the [dataset](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information)
 
 
  
