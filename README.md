@@ -69,13 +69,17 @@ Performance increased by **52%** when the spark application ran in cluster mode.
 With the two csv files obtained from spark apllication linear regression is performed.
 <br/>
 <br/>
-<br/>
-<br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/day_temp%20vs%20heat_consumed.JPG" width="700">
+<br/>
+<br/>
 <br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/day_temp%20vs%20heat_generated.JPG" width="700">
 <br/>
+<br/>
+<br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/night_temp%20vs%20heat_consumed.JPG" width="700">
+<br/>
+<br/>
 <br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/night_temp%20vs%20heat_generated.JPG" width="700">
 
