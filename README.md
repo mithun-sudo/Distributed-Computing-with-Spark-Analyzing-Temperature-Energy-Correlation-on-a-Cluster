@@ -72,9 +72,12 @@ Job failed because not enough cores for driver program.
 <br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/without%20cACHE.JPG" width="700">
 <br/>
+
 Performance increased by **52%** when the spark application ran in cluster mode.
+
 ***
-## Linear regression:
+
+## Linear regression
 With the two csv files obtained from spark application linear regression is performed.
 <br/>
 <br/>
