@@ -64,7 +64,7 @@ Using spark-submit, spark application was run in different configurations.
 Job failed because not enough cores for driver program.
 
 Performance increased by **52%** when the spark application ran in cluster mode.
-
+***
 ## Linear regression:
 With the two csv files obtained from spark application linear regression is performed.
 <br/>
@@ -84,15 +84,11 @@ With the two csv files obtained from spark application linear regression is perf
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/night_temp%20vs%20heat_generated.JPG" width="700">
 <br/>
 <br/>
-From the above graphs it can be concluded that during day time when temperature is usually at higher side, the heat generating appliances are used less. In night time the temperature drops to negative value and the usage of heat generating appliances increases significantly. With this data, daily energy consumption of a single household can be predicted based on the surrounding temperature and this data can be extrapolated for a entire city. 
+* From the above graphs it can be concluded that during day time when temperature is usually at higher side, the heat generating appliances are used less. 
+* In night time the temperature drops to negative value and the usage of heat generating appliances increases significantly. 
+* With this data, daily energy consumption of a single household can be predicted based on the surrounding temperature and this data can be extrapolated for a entire city. 
 
-
-
-
-
-
-
-
+***
 Dataset for this project was picked from kaggle. Link to the [dataset](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information)
 
 
