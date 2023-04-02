@@ -63,9 +63,15 @@ Using spark-submit, spark application was run in different configurations.
 --num-executors 2   --executor-cores 3   –executor-memory 5g
 Job failed because not enough cores for driver program.
 
-
- 
 Performance increased by **52%** when the spark application ran in cluster mode.
+
+## Linear regression:
+With the two csv files obtained from spark apllication linear regression is performed.
+The results.
+![](https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/day_temp%20vs%20heat_consumed.JPG)
+
+
+
 
 
 
