@@ -64,11 +64,11 @@ Using spark-submit, spark application was run in different configurations.
 Job failed because not enough cores for driver program.
 <br/>
 <br/>
-#### Cached:
+#### Cached run:
 <br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/cache%20work.JPG" width="700">
 <br/>
-#### Uncached:
+#### Uncached run:
 <br/>
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/without%20cACHE.JPG" width="700">
 <br/>
