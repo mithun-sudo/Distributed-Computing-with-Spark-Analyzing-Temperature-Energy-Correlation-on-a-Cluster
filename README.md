@@ -62,7 +62,20 @@ Using spark-submit, spark application was run in different configurations.
 ###### Configuration 3:
 --num-executors 2   --executor-cores 3   –executor-memory 5g
 Job failed because not enough cores for driver program.
-
+<br/>
+<br/>
+###### Cached:
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/cache%20work.JPG" width="700">
+<br/>
+<br/>
+###### Uncached:
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/without%20cACHE.JPG" width="700">
+<br/>
+<br/>
 Performance increased by **52%** when the spark application ran in cluster mode.
 ***
 ## Linear regression:
