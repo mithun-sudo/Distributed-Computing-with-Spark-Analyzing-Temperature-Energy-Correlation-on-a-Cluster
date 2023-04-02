@@ -75,7 +75,7 @@ Job failed because not enough cores for driver program.
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/without%20cACHE.JPG" width="700">
 <br/>
 
-Performance increased by **52%** when the spark application ran in cluster mode.
+When compared with local mode, performance increased by **52%** when the spark application ran in cluster mode.
 
 ***
 
