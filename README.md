@@ -84,7 +84,6 @@ With the two csv files obtained from spark apllication linear regression is perf
 <img src="https://github.com/mithun-sudo/Smart-Home-IoT/blob/main/images/night_temp%20vs%20heat_generated.JPG" width="700">
 <br/>
 <br/>
-<br/>
 From the above graphs it can be concluded that during day time when temperature is usually at higher side, the heat generating appliances are used less. In night time the temperature drops to negative value and the usage of heat generating appliances increases significantly. With this data, daily energy consumption of a single household can be predicted based on the surrounding temperature and this data can be extrapolated for a entire city. 
 
 
