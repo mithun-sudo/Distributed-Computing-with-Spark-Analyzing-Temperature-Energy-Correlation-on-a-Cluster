@@ -1,4 +1,4 @@
-# Smart-Home-IoT, A data engineering project.
+# Distributed Computing with Spark: Analyzing Temperature-Energy Correlation on a Cluster
 ***
 ## About Dataset
 For 350 days, the energy consumption of house appliances are tracked at the regular interval of one minute. Each record consists of energy consumed by the appliances and the weather conditions during that minute. 
